@@ -21,10 +21,9 @@ python3 preprocess-data.py \
 ## Run LoRA Fine-tuning
 
 ```bash
-python3 -m mlx_lm.lora --model microsoft/phi-2 \
+python3 -m mlx_lm.lora --model TinyLlama/TinyLlama-1.1B-Chat-v0.1 \
     --train \
     --data data \
     --lora-layers 8 \
-    --batch_size 1 \
     --iters 1000
 ```

@@ -1,6 +1,8 @@
 *.pyc
 *.pyo
+*.npz
+mlx_models
 __pycache__
 checkpoints
 data
-
+old-checkpoints

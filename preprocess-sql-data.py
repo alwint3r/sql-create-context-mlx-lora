@@ -4,10 +4,9 @@ import random
 import json
 
 def apply_qa_template(data):
-  return f"""Given the following table context
-{data["context"]}
-Question: {data["question"]}
-Answer: {data["answer"]}"""
+  return f"""### SQL Table Context: {data["context"]}
+### Human: {data["question"]}
+### Assistant: {data["answer"]}"""
 
 def transform_data(data):
   return { "text": apply_qa_template(data) }
