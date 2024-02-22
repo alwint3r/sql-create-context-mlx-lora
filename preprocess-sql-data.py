@@ -4,9 +4,15 @@ import random
 import json
 
 def apply_qa_template(data):
-  return f"""### SQL Table Context: {data["context"]}
-### Human: {data["question"]}
-### Assistant: {data["answer"]}"""
+  return f"""<|system|>
+You are a chatbot who can help code and translate natural language to SQL queries.</s>
+<|user|>
+SQL Table Context:
+{data["context"]}
+
+{data["question"]}</s>
+<|assistant|>
+{data["answer"]}"""
 
 def transform_data(data):
   return { "text": apply_qa_template(data) }
